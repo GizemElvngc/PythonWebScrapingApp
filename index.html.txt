@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd; navbar-expand-smmt-3">
+    
+      <ul class = "navbar-nav">
+          <li class = "nav-item">
+              <a href = "/app2" class = "nav-link">2.Sayfaya Gitmek için tıklayınız</a>
+          </li> 
+          <li class = "nav-item">
+              <a href = "/app3" class = "nav-link">3.Sayfaya Gitmek için tıklayınız</a>
+          </li>    
+      </ul>
+  </nav>      
+
+<!--     <a href = "/app2"> İkinci sayfaya geçmek için tıklayınız </a>-->
+    <div style = "margin-Top:150px;" class="container">
+        <h3> 1-Sayfada Geçen Kelimelerin Frekanslarını Hesaplama</h3>
+        <hr>
+
+
+
+
+        <form action ="" method = "post">
+           <div class="form-group">
+               <label for="formGroupExampleInput">1.URL Girişi</label>
+               <textarea required name="url" type="text" class="form-control" id="formGroupExampleInput"
+                         placeholder="Frekansı hesaplanacak URL adresini giriniz"></textarea>
+           </div>
+
+            <button type = "submit" class = "btn btn-danger"> Hesapla </button>
+        </form>
+
+
+{% if sonuç :     %}
+
+<table>
+
+<tbody>
+  {% for anahtar, deger in sonuç %}
+    <tr>
+      <td>{{ anahtar }}</td>
+      <td>{{ deger }}</td>
+    </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+{% endif  %}
+
+         
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
